@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+</head>
+<!-- <body> -->
+<body ng-app="jinterview" ng-controller="mainCtrl" >
+
+
+	<div>
+		<input type="text" ng-model="searchQuery">
+		<button ng-click="getEvents(searchQuery)">Click to get Ticket Master Events</button>
+	</div>
+
+	<div>
+		<table>
+		
+			<tr>
+				<th>Name</th>
+				<th>Date</th>
+				<th>Description</th>
+			</tr>
+			
+			<tr ng-repeat="event in events">
+				<th>{{event.name}}</th>
+				<th >{{event.dates.localDate}}</th>
+				<th >{{event.info}}</th>
+			</tr>
+			
+
+		</table>
+	</div>
+
+
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+</html>
