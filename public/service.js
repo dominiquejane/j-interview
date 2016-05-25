@@ -1,6 +1,6 @@
 angular.module("jinterview").service("mainService", function($http, $q) {
 
-	Secrets = "qDLoALvaNvTJIpggpw3PwmbG5FwYhn5S";
+	Secrets = "";
 
 	this.getEvents = function (searchQuery){
 		console.log("getting events");
